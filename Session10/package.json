@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "dotenv": "^10.0.0",
+    "inquirer": "^8.1.2",
     "jest": "^27.0.6",
     "minimist": "^1.2.5",
     "process": "^0.11.10",
