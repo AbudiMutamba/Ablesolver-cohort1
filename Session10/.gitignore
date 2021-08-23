@@ -1,6 +1,6 @@
 .env
 node_modules/
-../.DS_Store
+.DS_Store
 ../Session6
 ../Session7
 ../Session8
