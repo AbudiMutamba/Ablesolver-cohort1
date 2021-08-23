@@ -5,3 +5,9 @@ node_modules/
 ../Session7
 ../Session8
 ../Session9
+app.js
+input-from-cli.js
+other-types-of-question-cli.js
+process-student-names.js
+REPL-session.md
+timers.js
