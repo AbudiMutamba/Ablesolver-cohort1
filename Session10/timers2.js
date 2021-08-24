@@ -27,13 +27,50 @@
 //     clearInterval(id)
 // },4000)
 
-let count = 0 
-const interval = setInterval(() => {
-    count++
-    console.log(count)
+// let count = 0 
+// const interval = setInterval(() => {
+//     count++
+//     console.log(count)
 
-    if(count ===10){
-        clearInterval(interval)
+//     if(count ===10){
+//         clearInterval(interval)
+//     }
+// }, 1000);
+
+let payroll = [
+    {
+        "salary": "UGX 15M",
+        "paydate": "25th",
+        "status": false,
+        "name" : "David"
+    },
+    {
+        "name" : "Jonathan",
+        "salary": "UGX 13M",
+        "paydate": "30th",
+        "status": true,    
+    },
+    {
+        "name" : "Joanita",
+        "salary": "UGX 16M",
+        "paydate": "21st",
+        "status": false,    
+    }
+]
+
+let index = 0
+const PAYROLL_INTERVAL_ID = setInterval(() => {
+    
+    if(payroll[index].status == false){
+        console.log(`Name: ${payroll[index]['name']} Salary: ${payroll[index]['salary']} Payment on :${payroll[index]['paydate']}`)
+        payroll[index].status == true
+    }
+
+    index++
+
+    if(index === payroll.length){
+        clearInterval(PAYROLL_INTERVAL_ID)
+        console.log(payroll)
     }
 }, 1000);
 
