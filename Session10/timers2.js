@@ -13,17 +13,29 @@
 
 //setInterval: Running a callback forever on specific intervals
 
-setInterval(() => {
-    let date = new Date()
-    console.log(date.toLocaleTimeString())
+// setInterval(() => {
+//     let date = new Date()
+//     console.log(date.toLocaleTimeString())
+// }, 1000);
+
+// //To stop the setInterval we utilize the clearInterval by passing the ID of the setInterval()
+// const id = setInterval(() => {
+//     console.log('The set Interval message')
+// }, 1000);
+
+// setTimeout(() => {
+//     clearInterval(id)
+// },4000)
+
+let count = 0 
+const interval = setInterval(() => {
+    count++
+    console.log(count)
+
+    if(count ===10){
+        clearInterval(interval)
+    }
 }, 1000);
 
-//To stop the setInterval we utilize the clearInterval by passing the ID of the setInterval()
-const id = setInterval(() => {
-    console.log('The set Interval message')
-}, 1000);
 
-setTimeout(() => {
-    clearInterval(id)
-},4000)
 
