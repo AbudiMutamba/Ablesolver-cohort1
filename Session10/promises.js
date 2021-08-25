@@ -13,6 +13,7 @@
  * @param{sring} IS_IT_DONE
  */
 
+/*
  const DONE = false
 //const DONE = true
 // Definitation of the promise
@@ -35,3 +36,25 @@ const CHECK_IF_DONE = () => {
 }
 //Invoke the checker
 CHECK_IF_DONE()
+*/
+
+// Import the file system modules 'fs' and assign it to a variable
+const FS = require('fs')
+
+const READ_FILE = (fileName) => {
+    //Create and readFile(filename, encoding, callback) method of the fs module
+    return new Promise((resolve, reject) => {
+        FS.readFile(fileName, 'utf8', (err, data) => { //Specify the encoding to get a readable buffer
+            if(err) {
+                reject(err) //Reject the promise
+                return(data) //Resolve with data
+            }
+            resolve(data) //Resolve with data          
+        })
+    })
+}
+
+//Use the promise above.
+READ_FILE('./readme.md')
+    .then(data => console.log(data))
+    .catch(error => console.log(error))
