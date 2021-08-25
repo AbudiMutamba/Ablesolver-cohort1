@@ -11,3 +11,5 @@ other-types-of-question-cli.js
 process-student-names.js
 REPL-session.md
 timers.js
+asynchronicity.js
+timers2.js
