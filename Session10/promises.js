@@ -36,7 +36,7 @@ const CHECK_IF_DONE = () => {
 }
 //Invoke the checker
 CHECK_IF_DONE()
-*/
+
 
 // Import the file system modules 'fs' and assign it to a variable
 const FS = require('fs')
@@ -58,3 +58,25 @@ const READ_FILE = (fileName) => {
 READ_FILE('./readme.md')
     .then(data => console.log(data))
     .catch(error => console.log(error))
+*/
+
+const fetch = require('node-fetch')
+
+const STATUS = response => {
+
+    let { status, statusText } = response
+    if (status >= 200 && status < 300)
+        return Promise.resolve(response)
+    return Promise.reject(new Error( statusText))
+    
+}
+
+const JSON = response => response.json()
+
+fetch("https://jsonplaceholder.typicode.com/todos")
+.then(STATUS)
+.then(JSON)
+.then((data) => {
+    console.log(data)
+})
+.catch((error) => console.log(error));
