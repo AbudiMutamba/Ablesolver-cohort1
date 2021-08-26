@@ -73,7 +73,7 @@ const STATUS = response => {
 
 const JSON = response => response.json()
 
-fetch("https://jsonplaceholder.typicode.com/todos")
+fetch("https://jsonplaceholder.typicode.com/todoslast ")
 .then(STATUS)
 .then(JSON)
 .then((data) => {
