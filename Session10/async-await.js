@@ -1,3 +1,4 @@
+/*
 //Async/await 
 //1. Simplest example
 const BETTER_PROMISE = async function () {
@@ -29,3 +30,16 @@ WAIT_FOR_BETTER_PROMISE().then(result => {
     result += '\nGood bye!'
     console.log(result)
 }).catch(error => console.log(error))
+*/
+
+//Import the file system module 'fs' promises and assign it to a variable c
+const FS = require(`fs`).promises
+
+const READ_FILE = async (fileName) => {
+    let results = await FS.readFile(fileName, 'utf8') //The encoding is optional
+    return Buffer.from(results).toString() //Return the Buffer as a string
+}
+
+READ_FILE(`readme.md`)
+.then(result => console.log(result))
+.catch(error => console.error(error))
