@@ -15,3 +15,5 @@ asynchronicity.js
 timers2.js
 promises.js
 readme.md
+async-await.js
+events.js
