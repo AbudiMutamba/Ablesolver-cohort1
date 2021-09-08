@@ -1,3 +1,5 @@
+
+/*
 const https = require('https')
 
 const data = new TextEncoder().encode(JSON.stringify({
@@ -28,3 +30,17 @@ request.on('error', error => console.error(error))
 
 request.write(data)
 request.end()
+*/
+
+//Using a third party Library (axios) to perform HTTP requests
+
+const axios = require('axios')
+
+axios.post('https://jsonplaceholder.typicode.com/todos', {
+    todo: 'Buy the milk 🍼'
+})
+.then(response => {
+    console.log(`statuscode: ${response.status}`)
+    console.log(response)
+})
+.catch(error => console.error(error))
