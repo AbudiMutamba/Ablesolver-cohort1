@@ -21,3 +21,6 @@ request-handling.js
 server.js
 request-handling-2.js
 extract-body-from-requests.js
+logs
+test.text
+file-manage.js
