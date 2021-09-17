@@ -24,3 +24,5 @@ extract-body-from-requests.js
 logs
 test.text
 file-manage.js
+file-path.js
+file-stats.js
