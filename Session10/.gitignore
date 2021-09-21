@@ -26,3 +26,4 @@ test.text
 file-manage.js
 file-path.js
 file-stats.js
+os-management.js
